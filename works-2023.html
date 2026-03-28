@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works 2023 | Manu M Das</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .meta-list { list-style: none; padding: 0; margin-bottom: 20px; border-left: 2px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .meta-list li { font-size: 14px; color: #555; margin-bottom: 5px; }
+        .meta-list strong { color: #111; font-weight: 500; font-family: 'DM Sans', sans-serif;}
+        .project-section { margin-bottom: 80px; padding-bottom: 60px; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .project-section:last-child { border-bottom: none; }
+        .artwork img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; border: 1px solid rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Manu M Das</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="bio.html" class="nav-link">About</a>
+            <a href="statement.html" class="nav-link">Statement</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link active" style="cursor:default;">Portfolio</a>
+                <div class="dropdown-content">
+                    <a href="works-2026.html">Works 2026</a>
+                    <a href="works-2025.html">Works 2025</a>
+                    <a href="works-2024.html">Works 2024</a>
+                    <a href="works-2023.html" style="color: #111; background: rgba(0,0,0,0.05);">Works 2023</a>
+                </div>
+            </div>
+            <a href="cv.html" class="nav-link">CV</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="page-title">Works 2023</h2>
+        
+        <div class="text-content">
+            
+            <!-- Directional Diversity -->
+            <div class="project-section">
+                <ul class="meta-list">
+                    <li><strong style="font-size: 18px;">Directional Diversity</strong></li>
+                    <li><strong>Medium:</strong> Terracotta, Wood</li>
+                    <li><strong>Location:</strong> Sree Sankaracharya University of Sanskrit, Kalady</li>
+                </ul>
+                <p><strong>Concept note:</strong> Directional Diversity is a sculptural exploration of the fragmented relationship between human identity and the natural environment. Crafted from raw terracotta and mounted on wood, the work utilises fundamental, earth-based materials to reflect on our intrinsic physical connection to the land. The diverse animal forms represent the varied ecologies and species disrupted by human expansion. Placed on individual pedestals and facing different directions, they symbolise the disorientation and conflicting paths we navigate in our modern relationship with nature. It is a personal reflection on witnessing ecological shifts, capturing the silent, expressive tension of the natural world.</p>
+                <div class="exhibition-gallery">
+                    <figure class="artwork"><img src="assets/images/page_37_img_1.jpeg" alt="Directional Diversity"></figure>
+                    <figure class="artwork"><img src="assets/images/page_37_img_2.jpeg" alt="Directional Diversity"></figure>
+                    <figure class="artwork"><img src="assets/images/page_38_img_1.jpeg" alt="Directional Diversity"></figure>
+                    <figure class="artwork"><img src="assets/images/page_38_img_2.jpeg" alt="Directional Diversity"></figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:zoom-out;">
+        <img id="lightbox-img" style="max-width:95%; max-height:95%; object-fit:contain; outline:none;" src="">
+    </div>
+    <script>
+        document.querySelectorAll('.artwork img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                document.getElementById('lightbox-img').src = img.src;
+                document.getElementById('lightbox').style.display = 'flex';
+            });
+        });
+        document.getElementById('lightbox').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
